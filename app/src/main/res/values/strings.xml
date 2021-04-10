@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">News App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="news">News</string>
+    <string name="favorites">Favorites</string>
+    <string name="search_something">Search something…</string>
+    <string name="news_source">News Source</string>
+
+    <string name="footer_error">Results could not loaded</string>
+    <string name="retry">Retry</string>
+</resources>

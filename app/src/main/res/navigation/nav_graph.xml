@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newsFragment">
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.besirkaraoglu.newsapp.ui.main.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_detailedNewsFragment"
+            app:destination="@id/detailedNewsFragment" >
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.besirkaraoglu.newsapp.ui.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_detailedNewsFragment"
+            app:destination="@id/detailedNewsFragment" >
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailedNewsFragment"
+        android:name="com.besirkaraoglu.newsapp.ui.detailed.DetailedNewsFragment"
+        android:label="fragment_detailed_news"
+        tools:layout="@layout/fragment_detailed_news" >
+        <action
+            android:id="@+id/action_detailedNewsFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_detailedNewsFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <argument
+            android:name="article"
+            app:argType="com.besirkaraoglu.newsapp.model.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.besirkaraoglu.newsapp.ui.webview.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
+</navigation>
